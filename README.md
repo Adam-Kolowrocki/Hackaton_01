@@ -4,12 +4,10 @@ In Thi Repository You will find my first hackaton project.
 
 My project is a card game "War"
 
+I used random module to generate lists os 10 numbers representing cards for each of two payers.
 
-
-    Zasady: https://pl.wikipedia.org/wiki/Wojna_(gra_karciana)
-    Konieczność użycia modułu random.
-    Program rozdaje karty i drukuje informacje o przebiegu rozgrywki
-    Pomysły na uproszczenie gry:
-        zamiast implementować talię kart, używamy liczb (0, 1, 2 ... 9, 10, 11) dla (2, 3, 4, ... Q, K, A)
-        aby gra kończyła się wcześniej, rozdajemy tylko 10 kart
-        dwa tryby: zdobyte karty dochodzą do "ręki", lub są odkładane i nie wykorzystywane
+Then I've compared first form each list.
+As there were two sub-projects I've made 
+ - Card-War_1 - player who won the battle collects cards to his set till one have 0 cards
+ - Card-War_2 - cards are on the table so game is over after 10 rounds
+In every type of game the winner is the one who collect more cards. 

@@ -37,21 +37,27 @@ print(f'{player_2} ma {len(player_2_cards)} kart {player_2_hidden_cards}')
 input('Naciśnij Enter aby rozpocząć grę...')
 print(clear)
 
-while len(player_1_cards) > 0:
+while len(player_1_cards) != 0 and len(player_2_cards) != 0:
     round_counter += 1
     print((f'Runda {round_counter}'))
     print(f'{player_1} wykłada kartę -> {player_1_cards[0]}')
     print(f'{player_2} wykłada kartę -> {player_2_cards[0]}')
-    if player_1_cards[0] > player_2_cards[0]:
+    if player_1_cards[0] == player_2_cards[0]:
+        player_1_cards.pop(0)
+        player_2_cards.pop(0)
         player_1_score += 1
-        player_1_cards.pop(0)
-        player_2_cards.pop(0)
-        print(f'{player_1} wygrywa rundę i zdobywa punkt.')
-    else:
         player_2_score += 1
+        print(f'Runda remisowa, gramy dalej')
+    elif player_1_cards[0] > player_2_cards[0]:
         player_1_cards.pop(0)
         player_2_cards.pop(0)
-        print(f'{player_2} wygrywa rundę i zdobywa punkt.')
+        player_1_score += 2
+        print(f'{player_1} wygrywa rundę.')
+    else:
+        player_1_cards.pop(0)
+        player_2_cards.pop(0)
+        player_2_score += 2
+        print(f'{player_2} wygrywa rundę.')
     input('Naciśnij Enter...')
     print((clear))
 
